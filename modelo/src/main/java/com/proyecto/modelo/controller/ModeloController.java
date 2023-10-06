@@ -115,7 +115,7 @@ public class ModeloController {
      * @param piezasNecesarias El parámetro "piezasNecesarias" representa el número de piezas
      * necesarias para un modelo específico.
      */
-    @PutMapping (value = "/actualizar-piezas-necesarias/{idModelo}/{piezasNecesarias}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping (value = "/actualizacion-piezas-necesarias/{idModelo}/{piezasNecesarias}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void actualizarPiezasNecesarias(@PathVariable("idModelo") int idModelo, @PathVariable("piezasNecesarias") int piezasNecesarias) {
         servicio.actualizarPiezasNecesarias(idModelo, piezasNecesarias);
     }
@@ -127,7 +127,7 @@ public class ModeloController {
      * @param nombreModelo El parámetro "nombreModelo" es un String que representa el nuevo nombre de
      * un modelo.
      */
-    @PutMapping (value = "/actualizar-nombre-modelo/{idModelo}/{nombreModelo}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping (value = "/actualizacion-nombre-modelo/{idModelo}/{nombreModelo}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void actualizarNombreModelo(@PathVariable("idModelo") int idModelo, @PathVariable("nombreModelo") String nombreModelo) {
         servicio.actualizarNombreModelo(idModelo, nombreModelo);
     }
@@ -139,7 +139,7 @@ public class ModeloController {
      * @param coste El parámetro "costo" es de tipo doble y representa el valor de costo actualizado
      * para un modelo específico.
      */
-    @PutMapping (value = "/actualizar-coste/{idModelo}/{coste}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping (value = "/actualizacion-coste/{idModelo}/{coste}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void actualizarCoste(@PathVariable("idModelo") int idModelo, @PathVariable("coste") double coste) {
         servicio.actualizarCoste(idModelo, coste);
     }
