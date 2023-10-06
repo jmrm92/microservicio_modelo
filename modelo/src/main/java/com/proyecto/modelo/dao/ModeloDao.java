@@ -10,10 +10,10 @@ import com.proyecto.modelo.model.Modelo;
 
 public interface ModeloDao extends JpaRepository<Modelo, Integer> {
 
-    @Query("SELECT m FROM Modelo f WHERE m.nombreModelo LIKE '%:filtro%'")
+    @Query("SELECT m FROM Modelo m WHERE m.nombreModelo = :filtro")
     List<Modelo> filtrarPorNombre(@Param("filtro") String filtro);
 
-    @Query("SELECT m FROM Modelo m WHERE m.costeMonetario BETWEEN :costeMinimo AND :costeMaximo")
+    @Query("SELECT m FROM Modelo m WHERE m.coste BETWEEN :costeMinimo AND :costeMaximo")
     List<Modelo> filtrarPorCosteMonetario(@Param("costeMinimo") double costeMinimo,
             @Param("costeMaximo") double costeMaximo);
 
